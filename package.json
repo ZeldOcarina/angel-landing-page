@@ -1,7 +1,7 @@
 {
-  "name": "html-setup",
+  "name": "angel-landing-page",
   "version": "1.0.0",
-  "description": "A perfect HTML setup for Parcel",
+  "description": "A new landing page for Angel Longevity",
   "scripts": {
     "start": "parcel src/index.html --no-cache",
     "build": "parcel build src/index.html"
