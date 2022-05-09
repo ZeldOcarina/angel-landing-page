@@ -16,4 +16,5 @@ document.addEventListener("DOMContentLoaded", () => {
     const root = createRoot(document.getElementById("faq-container"));
     root.render(<Faq />);
     document.getElementById("date").innerText = new Date().getFullYear();
+    document.getElementById("date-2").innerText = new Date().getFullYear();
 });

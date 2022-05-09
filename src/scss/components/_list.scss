@@ -18,6 +18,10 @@
       @include respond (phone-land) {
          line-height: 6rem;
       }
+      @include respond(phone-port){
+         padding: 0;
+         margin: 0;
+      }
    }
    &__span{
       margin-right: 1rem;
@@ -40,6 +44,10 @@
       @include respond (phone-land) {
          width: 26px;
          height: 26px;
+      }
+      @include respond (phone-port) {
+         width: 22px;
+         height: 22px;
       }
    }
 }

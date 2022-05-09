@@ -1,24 +1,18 @@
 .positive{
-   min-height: 110vh;
    background-color: #35C9BC;
-   @include respond (laptop) {
-      min-height: 105vh;
-   }
-
-   @include respond (tab-land) {
-      min-height: 95vh;
-   }
-
-   @include respond (tab-port) {
-      min-height: 85vh;
-   }
-
-   @include respond (phone-land) {
-      min-height: 85vh;
-   }
    &__content{
       padding-top: $gutter;
       padding-bottom: $gutter;
+      @include respond (tab-land) {
+         padding-bottom: calc($gutter * 0.5);
+      }
+      @include respond (phone-port) {
+         padding: 0;
+         padding-top: calc($gutter * 0.5);
+         width: 100%;
+         margin: 0;
+      }
+      
    }
    &__icon{
       display: block;
@@ -29,6 +23,11 @@
       color: var(--white);
       text-align: center;
       padding-bottom: 2rem;
+      @include respond (phone-port) {
+         width: 70%;
+         margin: 0 auto;
+         text-align: center;
+      }
    }
    &__lists {
       display: flex;

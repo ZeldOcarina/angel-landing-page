@@ -18,42 +18,18 @@ const createDots = function () {
 createDots(); //Creating dots for slider
 
 
+const activateDot = function(slide){
+   document.querySelectorAll('.reviews__dot').forEach(dot => {
+      dot.classList.remove('reviews__dot_active')
+   });
 
-
-
-function createSlides() {
-   slides.forEach((s, i) => {
-         if (i === curSlide) {
-            s.style.opacity = "1";
-         } else {
-            s.style.opacity = "0";
-         }
-   })
+   document.querySelector(`.reviews__dot[data-slide="${slide}"]`).classList.add('reviews__dot_active');
 }
 
+activateDot(0);
 
-function goToSlide() {
-   slides.forEach((s, i) => {
-      setTimeout(() => {
-         if (i === curSlide) {
-            setTimeout(() => {
-               s.style.opacity = "1";
-            }, 400);
-         } else {
-            s.style.opacity = "0";
-         }
-      }, 500);
-   })
-}
-
-function changeSlide() {
-   slides.forEach((s, i) => {
-         if (i === curSlide) {
-            s.style.opacity = "1";
-         } else {
-            s.style.opacity = "0";
-         }
-   })
+const goToSlide = function(slide) {
+   slides.forEach((s, i) => s.style.transform = `translateX(${200 * (i - slide)}%)`)
 }
 
 
@@ -66,7 +42,8 @@ const nextSlide = function () {
       curSlide++;
    }
 
-   goToSlide(curSlide)
+   goToSlide(curSlide);
+   activateDot(curSlide);
 }
 
 const prevSlide = function () {
@@ -77,10 +54,11 @@ const prevSlide = function () {
    }
 
    goToSlide(curSlide);
+   activateDot(curSlide);
 }
 
 
-
+goToSlide(curSlide);
 
 
 
@@ -93,21 +71,19 @@ document.addEventListener('keydown', function (e) {
 })
 
 
-// dotContainer.addEventListener('click', function (e) {
-//    if (e.target.classList.contains('reviews__dot')) {
-//       const {slide} = e.target.dataset;
-//       console.log(slide);
-//       curSlide = slide;
-//       changeSlide(curSlide);
-//    }
-// })
+dotContainer.addEventListener('click', function (e) {
+   if (e.target.classList.contains('reviews__dot')) {
+      const {slide} = e.target.dataset;
+      goToSlide(slide);
+      activateDot(slide);
+   }
+})
 
-createSlides();
 
-window.onload = function interval() {
-   setInterval(nextSlide, 5000);
-}
+// window.onload = function interval() {
+//    setInterval(nextSlide, 5000);
+// }
 
-window.onclose = function() {
-   clearInterval(interval)
-}
+// window.onclose = function() {
+//    clearInterval(interval)
+// }

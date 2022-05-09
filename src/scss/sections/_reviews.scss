@@ -1,22 +1,40 @@
 .reviews{
-   padding-top: calc($gutter * 2.5);
-   min-height: 90vh;
+   padding-top: calc($gutter * 2);
+   padding-bottom: $gutter;
+   @include respond(tab-port){
+      padding-top: calc($gutter * 0.75);
+   }
+   @include respond(phone-port){
+      padding: 0;
+      margin: 0;
+      padding-top: calc($gutter * 0.5);
+   }
    &__slider{
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(5, 1fr);
       grid-column-gap: 0px;
       grid-row-gap: 0px;
+      overflow: hidden;
    }
    &__slide{
       grid-area: 1 / 1 / 6 / 6;
-      transition: opacity 1s;
+      transition: all 1s;
    }
    &__dots {
       margin-top: 7rem;
       grid-area: 5 / 3 / 6 / 4;
       display: flex;
       justify-content: center;
+      @include respond(tab-land){
+         margin-top: 6rem;
+      }
+      @include respond(phone-land){
+         margin-top: 8rem;
+      }
+      @include respond(phone-port){
+         margin-top: 10rem;
+      }
    }
    &__dot{
       display: block;
@@ -27,10 +45,18 @@
       padding: 0;
       margin: 0 5%;
       z-index: 1;
+      &_active{
+         @extend .reviews__dot;
+         background-color: #3E3E3E;
+      }
    }
    &__devider{
-      display: block;
+      width: 25%;
+      display: flex;
       margin: 0 auto;
+      img{
+         width: 100%;
+      }
    }
    &__content{
       width: 90%;
@@ -41,6 +67,18 @@
       margin-top: 9rem;
       font-size: 2.6rem;
       line-height: 4.8rem;
+      @include respond(laptop){
+         font-size: 2.2rem;
+      }
+      @include respond(tab-land){
+         font-size: 1.8rem;
+      }
+      @include respond(tab-port){
+         font-size: 1.6rem;
+      }
+      @include respond(phone-port){
+         font-size: 1.4rem;
+      }
    }
    &__btn{
       display: block;
@@ -52,7 +90,31 @@
       line-height: 7.7rem;
       text-align: center;
       margin: 0 auto;
-      margin-top: 20rem;
+      margin-top: 10rem;
+      @include respond(laptop){
+         font-size: 2.2rem;
+         width: 30%;
+         height: 65px;
+         line-height: 6.5rem;
+      }
+      @include respond(tab-land){
+         font-size: 2rem;
+         width: 30%;
+         height: 50px;
+         line-height: 5rem;
+      }
+      @include respond(tab-port){
+         font-size: 1.6rem;
+      }
+      @include respond(phone-port){
+         width: 80%;
+         height: 60px;
+         font-size: 2rem;
+         margin-top: 6rem;
+         line-height: 6rem;
+         margin-bottom: 6rem;
+      }
+      
    }
 }
 

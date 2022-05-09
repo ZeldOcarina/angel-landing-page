@@ -1,28 +1,31 @@
 .faq{
-   min-height: 160vh;
    background-color: var(--body-bg-color-second);
    padding-top: calc($gutter * 2);
+   @include respond(tab-land){
+      padding-top: $gutter;
+   }
 
    &__heading{
       align-self: center;
    }
    &__title{
       text-align: center;
-      font-size: 5.8rem;
    }
    &__subtitle{
       text-align: center;
-      font-size: 2.6rem;
    }
    &__content{
       margin-top: $gutter;
+      padding-bottom: $gutter;
+      @include respond(phone-land){
+         margin-top: calc($gutter * 0.5);
+         padding-bottom: calc($gutter * 0.5);
+      }
    }
    &__accordion{
       width: 85%;
       margin: 0 auto;
       position: relative;
-      border-top: 1px solid #707070;
-      border-bottom: 1px solid #707070;
       padding-top: 3rem;
       padding-bottom: 3rem;
       &:hover{

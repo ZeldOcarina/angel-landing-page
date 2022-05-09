@@ -19,7 +19,7 @@
    <header class="header">
       <div class="header__content">
          <a href="#" class="logo header__logo"><img src="assets/logo.svg" alt="logo"></a>
-         <p class="header__info">Conveniently Located in Studio City, Ca. Call today: 222.333.4444</p>
+         <p class="header__info"><span>Conveniently </span>Located in Studio City, Ca. Call today: 222.333.4444</p>
       </div>
    </header>
    <main>
@@ -187,20 +187,44 @@
          </div>
       </section>
       <section class="gallery">
-            <div class="gallery__slider">
-               <img class="gallery__slider__video" src="https://via.placeholder.com/1280x720">
+         <div class="gallery__slider container">
+            <img class="gallery__slider__video" src="https://via.placeholder.com/1280x720">
+            <div class="gallery__slides">
                <button id="left" class="arrow-left"><img src="assets/icons/arrow-left.svg" alt="arrow"></button>
-               <div class="gallery__slides">
-                  <div class="gallery__slide"><img src="https://via.placeholder.com/413x280" alt=""></div>
-                  <div class="gallery__slide"><img src="https://via.placeholder.com/413x280" alt=""></div>
-                  <div class="gallery__slide"><img src="https://via.placeholder.com/413x280" alt=""></div>
-               </div>
+               <div class="gallery__slide"><img src="https://via.placeholder.com/413x280" alt=""></div>
+               <div class="gallery__slide"><img src="https://via.placeholder.com/413x280" alt=""></div>
+               <div class="gallery__slide"><img src="https://via.placeholder.com/413x280" alt=""></div>
                <button id="right" class="arrow-right"><img src="assets/icons/arrow-right.svg" alt="arrow"></button>
             </div>
-            <div class="gallery__text">
-               <p class="gallery__p">“This is the preview headline for the video testimonial here…” <span>-Jane
-                     D.</span></p>
+         </div>
+         <div class="gallery__text container">
+            <p class="gallery__p">“This is the preview headline for the video testimonial here…” <span>-Jane
+                  D.</span></p>
+         </div>
+      </section>
+      <section class="gallery-mob">
+            <div class="gallery-mob__slides">
+               <div class="gallery-mob__slide"><img src="https://via.placeholder.com/413x280" alt="">
+                  <div class="gallery-mob__text">
+                     <p class="gallery-mob__p">“This is the preview headline for the video testimonial here…” <span>-Jane
+                           D.</span></p>
+                  </div>
+               </div>
+               <div class="gallery-mob__slide"><img src="https://via.placeholder.com/413x280" alt="">
+                  <div class="gallery-mob__text">
+                     <p class="gallery-mob__p">“This is the preview headline for the video testimonial here…” <span>-Jane
+                           D.</span></p>
+                  </div>
+               </div>
+               <div class="gallery-mob__slide"><img src="https://via.placeholder.com/413x280" alt="">
+                  <div class="gallery-mob__text">
+                     <p class="gallery-mob__p">“This is the preview headline for the video testimonial here…” <span>-Jane
+                           D.</span></p>
+                  </div>
+               </div>
             </div>
+         </div>
+         
       </section>
       <section class="contact">
          <h1 class="contact__title">Big Form Headline Could Be Here</h1>
@@ -250,7 +274,9 @@
          </div>
       </section>
       <section class="reviews container">
-         <img src="assets/reviews-devider.png" alt="star-icon" class="reviews__devider">
+         <div class="reviews__devider">
+            <img src="assets/reviews-devider.png" alt="star-icon">
+         </div>
          <div class="reviews__content">
             <div class="reviews__slider">
                <div class="reviews__slide">
@@ -297,8 +323,7 @@
          </div>
          </div>
       </section>
-      <section class="google-map" id="google-map">
-         <img src="assets/map-placeholder.png" alt="map">
+      <section class="google-map" id="map">
       </section>
    </main>
    <footer class="footer">
@@ -306,7 +331,7 @@
          <p class="footer__p-1">Copyright <span id="date"></span> Angel Longevity Medical Center. Lorem ipsum dolor sit
             amet, consectetur
             adipiscing elit?</p>
-         <p class="footer__p-2">Copyright <span id="date"></span> Angel Longevity Medical Center. Lorem ipsum dolor sit
+         <p class="footer__p-2">Copyright <span id="date-2"></span> Angel Longevity Medical Center. Lorem ipsum dolor sit
             amet, consectetur
             adipiscing elit?</p>
       </div>

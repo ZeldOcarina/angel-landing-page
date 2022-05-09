@@ -5,10 +5,22 @@
    @include respond(laptop) {
       height: 100px;
    }
+   @include respond(phone-port){
+      height: 136px;
+   }
    &__logo{
+      @include respond(phone-port){
+      }
       img{
          width: 100%;
+         @include respond(tab-port){
+            width: 80%;
+         }
+         @include respond(phone-port){
+            margin-top: 1rem;
+         }
       }
+      
    }
    &__content{
       height: 100%;
@@ -16,6 +28,9 @@
       justify-content: space-between;
       align-items: center;
       padding: 0 5%;
+      @include respond(phone-port){
+         display: block;
+      }
    }
    &__info{
       font-size: 2rem;
@@ -29,6 +44,19 @@
       @include respond(tab-land){
          font-size: 1.4rem;
          padding-left: 4rem;
+      }
+      @include respond(tab-port){
+         font-size: 1.4rem;
+         width: 40%;
+      }
+      @include respond(phone-port){
+         width: 100%;
+         padding: 0;
+         font-size: 1.2rem;
+         text-align: center;
+         span{
+            display: none;
+         }
       }
       
    }

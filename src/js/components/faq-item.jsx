@@ -4,7 +4,6 @@ import MuiAccordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
-//import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
 
@@ -14,20 +13,33 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
   },
   heading: {
-    fontFamily: "Kallisto, serif",
-    fontSize: theme.typography.pxToRem(38),
+    fontFamily: "Quatro Slab, sans-serif",
+    fontSize: theme.typography.pxToRem(35.2),
     fontWeight: theme.typography.fontWeightLight,
-    color: "#93A4B1",
+    color: "#525252",
+    "@media (min-width: 1800px)": {
+       fontSize: theme.typography.pxToRem(46)
+    },
+    "@media (max-width: 1200px)": {
+      fontSize: theme.typography.pxToRem(30)
+   },
   },
   text: {
-    fontSize: theme.typography.pxToRem(25),
-    color: "#93A4B1",
-    fontFamily: "Poppins, sans-serif",
+    fontSize: theme.typography.pxToRem(28.8),
+    color: "#525252",
+    maxWidth: "95%",
+    fontFamily: "Proxima Nova, serif",
+    "@media (min-width: 1800px)": {
+      fontSize: theme.typography.pxToRem(42),
+   },
+   "@media (max-width: 1200px)": {
+      fontSize: theme.typography.pxToRem(26)
+   },
 
     "& h5": {
-      fontFamily: "Kallisto, serif",
+      fontFamily: "Proxima Nova, serif",
       textAlign: "left",
-      fontSize: theme.typography.pxToRem(25),
+      fontSize: theme.typography.pxToRem(25)
     },
   },
   icon: {
@@ -37,20 +49,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "30px",
     position: "absolute",
     top: "50%",
-    right: 0,
-    transform: "translateY(-50%)",
+    right: 16,
     "&:hover": {
       cursor: "pointer",
-    },
-    "@media (max-width: 1366px)": {
-      right: 32,
-    },
-    "@media (max-width: 1024px)": {
-      right: 35,
-    },
-    "@media (max-width: 768px)": {
-      right: 37,
-    },
+    }
   },
   accordionDetails: {
     "@media (max-width: 1366px)": {
@@ -70,13 +72,18 @@ const useStyles = makeStyles((theme) => ({
 
 const Accordion = withStyles({
   root: {
-    borderBottom: "1px solid rgba(6, 139, 255, 0.237)",
-    padding: "2rem 2rem 2rem 0",
+    borderBottom: "1px solid #707070",
+   //  borderTop: "1px solid #707070",
+    padding: "2rem 0",
     backgroundColor: "transparent",
+    boxShadow: "none",
 
     "&:not(:last-child)": {
-      marginBottom: "2rem",
+      marginBottom: "0",
     },
+    "&:first-child": {
+      borderTop: "1px solid #707070",
+    }
   },
 })(MuiAccordion);
 
@@ -111,7 +118,7 @@ const faqItem = ({ question, answer, i }) => {
             <AddIcon
               className={classes.icon}
               fontSize="inherit"
-              htmlColor="#febe03"
+              htmlColor="#14A6CB"
             />
           )
         }
@@ -127,7 +134,7 @@ const faqItem = ({ question, answer, i }) => {
           dangerouslySetInnerHTML={{ __html: answer }}></Typography>
         {isAccordionOpen && (
           <RemoveIcon
-            htmlColor="#fd7e01"
+            htmlColor="#14A6CB"
             onClick={handleCloseIconClick}
             className={classes.closeIcon}
           />
