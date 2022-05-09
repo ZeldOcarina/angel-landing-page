@@ -6,7 +6,10 @@
    &__slider {
       width: 70%;
       &__video{
-         width: 100%;
+         video{
+            width: 100%;
+         }
+         
       }
    }
    &__slides {
@@ -16,7 +19,7 @@
    }
    &__slide{
       width: 32.5%;
-      img{
+      video{
          width: 100%;
       }
    } 

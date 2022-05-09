@@ -1,7 +1,8 @@
 import { createRoot } from 'react-dom/client';
-
+// import './js/gallery'
 import './js/reviews'
 import './js/google-maps'
+
 
 import Faq from "./js/faq.jsx";
 

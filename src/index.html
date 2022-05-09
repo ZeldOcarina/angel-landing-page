@@ -188,17 +188,19 @@
       </section>
       <section class="gallery">
          <div class="gallery__slider container">
-            <img class="gallery__slider__video" src="https://via.placeholder.com/1280x720">
+            <div class="gallery__slider__video" id="video">
+               <video controls poster="https://via.placeholder.com/1280x720"><source></video>
+            </div>
             <div class="gallery__slides">
-               <button id="left" class="arrow-left"><img src="assets/icons/arrow-left.svg" alt="arrow"></button>
-               <div class="gallery__slide"><img src="https://via.placeholder.com/413x280" alt=""></div>
-               <div class="gallery__slide"><img src="https://via.placeholder.com/413x280" alt=""></div>
-               <div class="gallery__slide"><img src="https://via.placeholder.com/413x280" alt=""></div>
-               <button id="right" class="arrow-right"><img src="assets/icons/arrow-right.svg" alt="arrow"></button>
+               <!-- <button id="left" class="arrow-left"><img src="assets/icons/arrow-left.svg" alt="arrow"></button> -->
+               <video class="gallery__slide" controls poster="https://via.placeholder.com/413x280"><source></video>
+               <video class="gallery__slide" controls poster="https://via.placeholder.com/413x280"><source></video>
+               <video class="gallery__slide" controls poster="https://via.placeholder.com/413x280"><source></video>
+               <!-- <button id="right" class="arrow-right"><img src="assets/icons/arrow-right.svg" alt="arrow"></button> -->
             </div>
          </div>
          <div class="gallery__text container">
-            <p class="gallery__p">“This is the preview headline for the video testimonial here…” <span>-Jane
+            <p class="gallery__p" id="gal">“This is the preview headline for the video testimonial here…” <span>-Jane
                   D.</span></p>
          </div>
       </section>
