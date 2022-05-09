@@ -2,7 +2,7 @@ import { createRoot } from 'react-dom/client';
 
 import './js/reviews'
 
-import Faq from "./js/faq";
+import Faq from "./js/faq.jsx";
 
 
 
