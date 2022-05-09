@@ -1,0 +1,23 @@
+.symptoms {
+   min-height: 120vh;
+   background-color: #14A6CB;
+   &__content {
+      padding-top: $gutter;
+   }
+   &__icon {
+      display: block;
+      margin: 0 auto;
+      padding-bottom: 2rem;
+   }
+   &__title{
+      color: var(--white);
+      text-align: center;
+      padding-bottom: 2rem;
+   }
+   &__lists{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding-bottom: $gutter;
+   }
+}

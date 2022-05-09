@@ -1,0 +1,39 @@
+.positive{
+   min-height: 110vh;
+   background-color: #35C9BC;
+   @include respond (laptop) {
+      min-height: 105vh;
+   }
+
+   @include respond (tab-land) {
+      min-height: 95vh;
+   }
+
+   @include respond (tab-port) {
+      min-height: 85vh;
+   }
+
+   @include respond (phone-land) {
+      min-height: 85vh;
+   }
+   &__content{
+      padding-top: $gutter;
+      padding-bottom: $gutter;
+   }
+   &__icon{
+      display: block;
+      margin: 0 auto;
+      padding-bottom: 2rem;
+   }
+   &__title{
+      color: var(--white);
+      text-align: center;
+      padding-bottom: 2rem;
+   }
+   &__lists {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding-bottom: $gutter;
+   }
+}

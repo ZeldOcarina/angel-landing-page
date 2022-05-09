@@ -1,0 +1,46 @@
+.contact{
+   min-height: 90vh;
+   background-image: url("../assets/contact-bg.png");
+   background-size: cover;
+   &__title{
+      padding-top: $gutter;;
+      color: var(--white);
+      text-align: center;
+   }
+   &__content{
+      margin-top: 8rem;
+      display: flex;
+      justify-content: space-between;
+   }
+   &__form{
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+   }
+   &__name,
+   &__lastname{
+      font-size: 2.6rem;
+      width: 46%;
+      height: 77px;
+      padding-left: 1rem;
+      border: 2px solid #3C3C3C;
+      color: #3C3C3C;
+   }
+   &__email,
+   &__password{
+      font-size: 2.6rem;
+      width: 100%;
+      height: 77px;
+      padding-left: 1rem;
+      border: 2px solid #3C3C3C;
+      color: #3C3C3C;
+   }
+   &__btn{
+      width: 100%;
+      height: 77px;
+      font-size: 2.6rem;
+      background-color: #3C3C3C;
+      color: #FCFCFC;
+   }
+}

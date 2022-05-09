@@ -1,0 +1,18 @@
+.monarchy {
+   height: 66px;
+   width: 100%;
+   background-color: rgba(57, 62, 65, 1);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   left: 0;
+   bottom: 0;
+
+   p {
+      font-size: 1.2rem;
+      line-height: 66px;
+      margin-top: 0.6rem;
+      color: rgba(214, 214, 214, 1);
+      padding-right: 2rem;
+   }
+}

@@ -1,0 +1,45 @@
+.list{
+   &__item{
+      line-height: 10rem;
+      display: flex;
+      align-items: center;
+      @include respond (laptop) {
+         line-height: 8rem;
+      }
+   
+      @include respond (tab-land) {
+         line-height: 6rem;
+      }
+   
+      @include respond (tab-port) {
+         line-height: 6rem;
+      }
+   
+      @include respond (phone-land) {
+         line-height: 6rem;
+      }
+   }
+   &__span{
+      margin-right: 1rem;
+   
+      @include respond (laptop) {
+         width: 32px;
+         height: 32px;
+      }
+   
+      @include respond (tab-land) {
+         width: 30px;
+         height: 30px;
+      }
+   
+      @include respond (tab-port) {
+         width: 28px;
+         height: 28px;
+      }
+   
+      @include respond (phone-land) {
+         width: 26px;
+         height: 26px;
+      }
+   }
+}
