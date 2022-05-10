@@ -1,7 +1,10 @@
 .header{
    height: 136px;
    background-color: var(--color-primary);
-   
+   width: 100%;
+   position: sticky;
+   top: 0;
+   z-index: 100;
    @include respond(laptop) {
       height: 100px;
    }
@@ -17,7 +20,10 @@
             width: 80%;
          }
          @include respond(phone-port){
-            margin-top: 1rem;
+            padding: 1% 0;
+            width: 70%;
+            display: block;
+            margin: 0 auto;
          }
       }
       
@@ -54,10 +60,26 @@
          padding: 0;
          font-size: 1.2rem;
          text-align: center;
+         position: sticky;
+         top: 0;
          span{
             display: none;
          }
       }
       
+   }
+}
+
+@include respond (iphone-5){
+   .header__iphone-5{
+      height: 60px;
+   }
+   .logo-hide{
+      display: none;
+   }
+   .header__info{
+      margin: 0;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
    }
 }

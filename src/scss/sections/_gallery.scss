@@ -1,93 +1,115 @@
 .gallery {
    margin-top: -5%;
-   @include respond(phone-port){
+
+   @include respond(phone-port) {
       display: none;
    }
+
    &__slider {
       width: 70%;
-      &__video{
-         video{
-            width: 100%;
-         }
-         
+   }
+
+   &__iframe-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+
+      iframe,
+      object,
+      embed {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+      }
+      &_sm{
+         padding-bottom: 18.75%;
       }
    }
+
    &__slides {
+      margin-top: 1rem;
       position: relative;
       display: flex;
       justify-content: space-between;
    }
-   &__slide{
+
+   &__slide {
       width: 32.5%;
-      video{
-         width: 100%;
-      }
-   } 
-   &__text{
+   }
+
+   &__text {
       width: 70%;
       padding-bottom: $gutter;
-      
+
    }
-   
+
    &__p {
       text-align: center;
       font-size: 4.8rem;
       color: var(--black);
+
       @include respond (laptop) {
          font-size: 4rem;
       }
+
       @include respond (tab-land) {
          font-size: 3.4rem;
       }
+
       @include respond (tab-port) {
          font-size: 3rem;
       }
+
       span {
          color: var(--grey);
       }
    }
 }
 
-.arrow-left{
-   position: absolute;
-   top: 44%;
-   left: -7%;
-   @include respond(tab-port){
-      left: -10%;
-      top: 33%;
-   }
-}
 
-.arrow-right{
-   position: absolute;
-   top: 44%;
-   right: -7%;
-   @include respond(tab-port){
-      right: -10%;
-      top: 33%;
-   }
-}
-
-.gallery-mob{
+.gallery-mob {
    @media screen and (min-width: 550px) {
       display: none;
    }
-   &__slide{
-      video{
+
+   &__slide {
+      width: 100%;
+   }
+
+   &__iframe-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+
+      iframe,
+      object,
+      embed {
+         position: absolute;
+         top: 0;
+         left: 0;
          width: 100%;
+         height: 100%;
       }
    }
-   &__text{
-      width: 90%;
-      margin: 0 auto;
-   }
-   
-   &__p {
-      text-align: center;
-      font-size: 2.4rem;
-      color: var(--black);
-      span {
-         color: var(--grey);
+
+      &__text {
+         width: 90%;
+         margin: 0 auto;
       }
-   }
+
+      &__p {
+         text-align: center;
+         font-size: 2.4rem;
+         color: var(--black);
+
+         span {
+            color: var(--grey);
+         }
+      }
 }

@@ -5,16 +5,16 @@ document.body.appendChild(script);
 
 
 function initMap() {
-   // The location of Uluru
-  const uluru = { lat: 34.157310, lng: -118.412920 };
-  // The map, centered at Uluru
+   // The location of officeLocation
+  const officeLocation = { lat: 34.157310, lng: -118.412920 };
+  // The map, centered at officeLocation
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 16,
-    center: uluru,
+    center: officeLocation,
   });
-  // The marker, positioned at Uluru
+  // The marker, positioned at officeLocation
   const marker = new google.maps.Marker({
-    position: uluru,
+    position: officeLocation,
     map: map,
   });
  }

@@ -40,8 +40,13 @@
          font-size: 1.4rem;
       }
       @include respond(phone-port){
-         width: 100%;
+         width: 99%;
          text-align: center;
+      }
+      @include respond(iphone-5){
+         width: 99%;
+         text-align: center;
+         font-size: 1rem;
       }
    }
    &__p-2{
@@ -59,8 +64,13 @@
          font-size: 1.2rem;
       }
       @include respond(phone-port){
-         width: 100%;
+         width: 99%;
          text-align: center;
+      }
+      @include respond(iphone-5){
+         width: 99%;
+         text-align: center;
+         font-size: 0.8rem;
       }
    }
 }
