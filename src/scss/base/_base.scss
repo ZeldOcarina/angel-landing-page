@@ -17,6 +17,7 @@ body {
 
    @include respond(phone-land) {
       font-size: $mobile-font-size;
+      font-weight: 300;
    }
    
 }
