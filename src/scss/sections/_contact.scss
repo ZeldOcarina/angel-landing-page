@@ -2,7 +2,7 @@
    background-image: url("../assets/contact-bg.png");
    background-size: cover;
    padding-bottom: $gutter;
-
+   position: relative;
    &__title {
       padding-top: $gutter;
       ;

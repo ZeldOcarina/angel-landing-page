@@ -35,6 +35,9 @@
       @include respond(phone-port){
          margin-top: 10rem;
       }
+      @include respond(iphone-5){
+         margin-top: 11rem;
+      }
    }
    &__dot{
       display: block;

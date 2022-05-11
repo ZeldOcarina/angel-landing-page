@@ -61,6 +61,11 @@
          margin: 10% auto;
 
       }
+      @include respond(iphone-5){
+         width: 90%;
+         margin: 10% auto;
+
+      }
    }
    &__p{
       line-height: 4.1rem;

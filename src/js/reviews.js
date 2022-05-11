@@ -79,11 +79,3 @@ dotContainer.addEventListener('click', function (e) {
    }
 })
 
-
-// window.onload = function interval() {
-//    setInterval(nextSlide, 5000);
-// }
-
-// window.onclose = function() {
-//    clearInterval(interval)
-// }
