@@ -5,11 +5,7 @@ document.body.appendChild(script);
 
 
 function initMap() {
-<<<<<<< HEAD
   // The location of officeLocation
-=======
-   // The location of officeLocation
->>>>>>> f41ec1f01d16076f3a8102dffbe7dd2b7a3c8e01
   const officeLocation = { lat: 34.157310, lng: -118.412920 };
   // The map, centered at officeLocation
   const map = new google.maps.Map(document.getElementById("map"), {
