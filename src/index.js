@@ -4,12 +4,10 @@ import { createRoot } from 'react-dom/client';
 import './js/header-mob'
 import './js/reviews'
 import './js/google-maps'
-import './js/form-submit'
+//import './js/form-submit'
 
 
 import Faq from "./js/faq.jsx";
-
-
 
 if (module.hot) {
     module.hot.accept();
