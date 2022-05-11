@@ -1,7 +1,7 @@
-"use strict";
+import formurlencoded from "form-urlencoded";
 
 const form = document.querySelector("form");
-const endpoint = form.getAttribute("action");
+const action = form.getAttribute("action");
 const loader = document.querySelector(".loader");
 
 
@@ -12,8 +12,9 @@ if (form) {
      const formData = new FormData(form);
 
      const requestBody = {};
-     for (var [name, value] of formData.entries()) requestBody[name] = value;
-     requestBody.accept = true;
+     for (const [name, value] of formData.entries()) {
+      requestBody[name] = value;
+     }
 
      try {
        const response = await fetch(action, {
@@ -23,6 +24,7 @@ if (form) {
          },
          body: formurlencoded(requestBody),
        });
+       console.dir(response);
        if (response.status === 200) {
          loader.classList.add("d-none");
        } else throw new Error("Error");
