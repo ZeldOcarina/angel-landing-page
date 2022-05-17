@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
+import ReactMarkdown from "react-markdown";
 import MuiAccordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
@@ -18,11 +19,11 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: theme.typography.fontWeightLight,
     color: "#525252",
     "@media (min-width: 1800px)": {
-       fontSize: theme.typography.pxToRem(46)
+      fontSize: theme.typography.pxToRem(46),
     },
     "@media (max-width: 1200px)": {
-      fontSize: theme.typography.pxToRem(30)
-   },
+      fontSize: theme.typography.pxToRem(30),
+    },
   },
   text: {
     fontSize: theme.typography.pxToRem(28.8),
@@ -31,15 +32,15 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Proxima Nova, serif",
     "@media (min-width: 1800px)": {
       fontSize: theme.typography.pxToRem(42),
-   },
-   "@media (max-width: 1200px)": {
-      fontSize: theme.typography.pxToRem(26)
-   },
+    },
+    "@media (max-width: 1200px)": {
+      fontSize: theme.typography.pxToRem(26),
+    },
 
     "& h5": {
       fontFamily: "Proxima Nova, serif",
       textAlign: "left",
-      fontSize: theme.typography.pxToRem(25)
+      fontSize: theme.typography.pxToRem(25),
     },
   },
   icon: {
@@ -52,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     right: 16,
     "&:hover": {
       cursor: "pointer",
-    }
+    },
   },
   accordionDetails: {
     "@media (max-width: 1366px)": {
@@ -73,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
 const Accordion = withStyles({
   root: {
     borderBottom: "1px solid #707070",
-   //  borderTop: "1px solid #707070",
+    //  borderTop: "1px solid #707070",
     padding: "2rem 0",
     backgroundColor: "transparent",
     boxShadow: "none",
@@ -83,7 +84,7 @@ const Accordion = withStyles({
     },
     "&:first-child": {
       borderTop: "1px solid #707070",
-    }
+    },
   },
 })(MuiAccordion);
 
@@ -91,7 +92,6 @@ const faqItem = ({ question, answer, i }) => {
   const [isAccordionOpen, setIsAccordionOpen] = useState(false);
   function handleAccordionChange(e, expanded) {
     setIsAccordionOpen(expanded);
-    console.log(expanded);
   }
   function handleCloseIconClick() {
     setIsAccordionOpen(false);
@@ -129,9 +129,7 @@ const faqItem = ({ question, answer, i }) => {
           dangerouslySetInnerHTML={{ __html: question }}></Typography>
       </AccordionSummary>
       <AccordionDetails className={classes.accordionDetails}>
-        <Typography
-          className={classes.text}
-          dangerouslySetInnerHTML={{ __html: answer }}></Typography>
+        <ReactMarkdown children={answer} className={classes.text} />
         {isAccordionOpen && (
           <RemoveIcon
             htmlColor="#14A6CB"

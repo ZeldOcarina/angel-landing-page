@@ -15,8 +15,10 @@ if (module.hot) {
 
 document.addEventListener("DOMContentLoaded", () => {
     //Initiate React APP for FAQs
-    const root = createRoot(document.getElementById("faq-container"));
-    root.render(<Faq />);
+    const faqContainer = document.getElementById("faq-container");
+    const collection = faqContainer.dataset.collection;
+    const root = createRoot(faqContainer);
+    root.render(<Faq collection={collection} />);
     document.getElementById("date").innerText = new Date().getFullYear();
     document.getElementById("date-2").innerText = new Date().getFullYear();
 });
